@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "__Attribute__.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self testAttributes];
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)testAttributes {
+    Son *son = [[Son alloc] init];
+    [son testRequiresSuper];
+    son = nil;
 }
 
 
