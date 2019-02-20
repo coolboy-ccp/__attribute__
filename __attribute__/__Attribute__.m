@@ -30,6 +30,7 @@ typedef struct boxable {
 - (void)testRequiresSuper {
     [super testRequiresSuper];
     NSLock *lock = [[NSLock alloc] init];
+    AUTO_LOCK(lock)
 //    auto_lock(lock);
     
     onExit {
